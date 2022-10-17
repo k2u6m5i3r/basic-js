@@ -29,7 +29,7 @@ const { NotImplementedError } = require('../extensions/index.js');
   // }
 
   encrypt(msg , key) {
-   throw new NotImplementedError("Not implemented");
+   //throw new NotImplementedError("Not implemented");
     // remove line with error and write your code here
     let aplha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     function normaliseKey(msg, key){
@@ -65,7 +65,7 @@ const { NotImplementedError } = require('../extensions/index.js');
      
   }
   decrypt(msgCript, key) {
-  throw new NotImplementedError("Not implemented");
+  //throw new NotImplementedError("Not implemented");
     // remove line with error and write your code here
     let aplha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     function normaliseKey(msg, key){
