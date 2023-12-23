@@ -1,4 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { NotImplementedError } = require("../extensions/index.js");
 
 /**
  * There's a list of file, since two files cannot have equal names,
@@ -16,41 +16,40 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function renameFiles(names) {
-    // throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
-    let ans = [];
-    for (let index = 0; index < names.length; index++) {
-        const element = names[index];
-        if (!ans.includes(element)) {
-            ans.push(element);
-        } else {
-            let j = 0;
-            for (let indexInNames = 0; indexInNames < index; indexInNames++) {
-                const elementInNames = names[indexInNames];
-                if (elementInNames == element) {
-                    j++;
-                }
-            }
-            if (j == 0) {
-                let k = 0;
-                for (let indexInAns = 0; indexInAns < ans.length; indexInAns++) {
-                    const elementInAns = ans[indexInAns];
-                    if (element == elementInAns) {
-                        k++;
-                    }
-                }
-                if (k != 0) {
-                    ans.push(`${element}(${k})`);
-                }
-            } else {
-                ans.push(`${element}(${j})`);
-            }
-
+  // throw new NotImplementedError('Not implemented');
+  // remove line with error and write your code here
+  let ans = [];
+  for (let index = 0; index < names.length; index++) {
+    const element = names[index];
+    if (!ans.includes(element)) {
+      ans.push(element);
+    } else {
+      let j = 0;
+      for (let indexInNames = 0; indexInNames < index; indexInNames++) {
+        const elementInNames = names[indexInNames];
+        if (elementInNames == element) {
+          j++;
         }
+      }
+      if (j == 0) {
+        let k = 0;
+        for (let indexInAns = 0; indexInAns < ans.length; indexInAns++) {
+          const elementInAns = ans[indexInAns];
+          if (element == elementInAns) {
+            k++;
+          }
+        }
+        if (k != 0) {
+          ans.push(`${element}(${k})`);
+        }
+      } else {
+        ans.push(`${element}(${j})`);
+      }
     }
-    return ans;
+  }
+  return ans;
 }
 
 module.exports = {
-    renameFiles
+  renameFiles,
 };
