@@ -1,28 +1,28 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { NotImplementedError } = require("../extensions/index.js");
 
 /**
  * Create a repeating string based on the given parameters
- *  
+ *
  * @param {String} str string to repeat
- * @param {Object} options options object 
+ * @param {Object} options options object
  * @return {String} repeating string
- * 
+ *
  *
  * @example
- * 
- * repeater('STRING', * { 
- * repeatTimes: 3, 
- * separator: '**', 
- * addition: 'PLUS', 
- * additionRepeatTimes: 3, 
+ *
+ * repeater('STRING', * {
+ * repeatTimes: 3,
+ * separator: '**',
+ * addition: 'PLUS',
+ * additionRepeatTimes: 3,
  * additionSeparator: '00' })
- * => 
+ * =>
  *  'STRING PLUS 00 PLUS 00 PLUS
  * **STRING PLUS 00 PLUS 00 PLUS
  * **STRING PLUS 00 PLUS 00 PLUS'
  *
  */
-function repeater( str, options ) {
+function repeater(str, options) {
   // throw new NotImplementedError("Not implemented");
   // remove line with error and write your code here
   // console.log(str);
@@ -32,13 +32,13 @@ function repeater( str, options ) {
   if ("separator" in options) {
     //console.log(" separator ", options["separator"]);
   } else {
-    options["separator"] = '+';
+    options["separator"] = "+";
     //console.log(" separator ", options["separator"]);
   }
   if ("addition" in options) {
     //console.log(" addition ", options["addition"]);
-  } else{
-    options["addition"] ="";
+  } else {
+    options["addition"] = "";
   }
   if ("additionRepeatTimes" in options) {
     //console.log(" additionRepeatTimes ", options["additionRepeatTimes"]);
@@ -46,7 +46,7 @@ function repeater( str, options ) {
   if ("additionSeparator" in options) {
     //console.log(" additionSeparator ", options["additionSeparator"]);
   } else {
-    options["additionSeparator"] = '|';
+    options["additionSeparator"] = "|";
     //console.log(" additionSeparator ", options["additionSeparator"]);
   }
   let ans = "";
@@ -65,5 +65,5 @@ function repeater( str, options ) {
 }
 
 module.exports = {
-  repeater
+  repeater,
 };
