@@ -1,4 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { NotImplementedError } = require("../extensions/index.js");
 
 /**
  * Given matrix, a rectangular matrix of integers,
@@ -38,5 +38,5 @@ function getMatrixElementsSum(matrix) {
 }
 
 module.exports = {
-  getMatrixElementsSum
+  getMatrixElementsSum,
 };
